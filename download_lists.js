@@ -5,14 +5,13 @@ import { resolve } from "node:path";
 import {
   LIST_TYPE,
   PROCESSING_FILENAME,
-  RECOMMENDED_ALLOWLIST_URLS,
   RECOMMENDED_BLOCKLIST_URLS,
   USER_DEFINED_ALLOWLIST_URLS,
   USER_DEFINED_BLOCKLIST_URLS,
 } from "./lib/constants.js";
 import { downloadFiles } from "./lib/utils.js";
 
-const allowlistUrls = USER_DEFINED_ALLOWLIST_URLS || RECOMMENDED_ALLOWLIST_URLS;
+const allowlistUrls = USER_DEFINED_ALLOWLIST_URLS;
 const blocklistUrls = USER_DEFINED_BLOCKLIST_URLS || RECOMMENDED_BLOCKLIST_URLS;
 const listType = process.argv[2];
 
